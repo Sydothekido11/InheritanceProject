@@ -2,7 +2,7 @@ package inheritance.model;
 
 import java.util.ArrayList;
 
-public abstract class Kpop 
+public abstract class Kpop implements Foods
 {
 
 	private double numberOfMembers;
@@ -28,4 +28,5 @@ public abstract class Kpop
 	public void setCatchy(boolean isCatchy) {
 		this.isCatchy = isCatchy;
 	}
+	
 }
