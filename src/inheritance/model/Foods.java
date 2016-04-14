@@ -10,4 +10,5 @@ public interface Foods
 	public boolean isHealthee(ArrayList<String> ingredients);
 	public int calorieCounter(int calories);
 	public int deliciousness(int criticRating);
+	public int compareTo(Object thing);
 }
