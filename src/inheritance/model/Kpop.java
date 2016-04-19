@@ -2,7 +2,7 @@ package inheritance.model;
 
 import java.util.ArrayList;
 
-public abstract class Kpop implements Foods, Comparable<Kpop>
+public abstract class Kpop implements Foods, Comparable<Foods>
 {
 
 	private double numberOfMembers;
@@ -42,16 +42,16 @@ public abstract class Kpop implements Foods, Comparable<Kpop>
 	 * If it is the same return 0.
 	 * someSoup.compareTo(otherSoup);
 	 */
-	public int compareTo(Kpop compared)
+	public int compareTo(Object compared)
 	{
 		 int comparedValue;
 		 
 		 
-			 if(this.getNumberOfMembers() < ((Kpop) compared).getNumberOfMembers())
+			 if(this.calorieCounter() < ((Foods) compared).calorieCounter(this.calories))
 			 {
 				 comparedValue = -1;
 			 }
-			 else if(this.getNumberOfMembers() > ((Kpop) compared).getNumberOfMembers())
+			 else if(this.calorieCounter(this.calories) > ((Foods) compared).calorieCounter(this.calories))
 			 {
 				 comparedValue = 1;
 			 }

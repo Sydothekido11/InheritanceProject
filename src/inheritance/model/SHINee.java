@@ -54,4 +54,10 @@ public class SHINee extends Kpop
 		return 100;
 	}
 
+	@Override
+	public int compareTo(Kpop thing) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
