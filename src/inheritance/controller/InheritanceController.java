@@ -2,13 +2,18 @@ package inheritance.controller;
 
 import java.util.ArrayList;
 
+import inheritance.model.FourMeat;
+import inheritance.model.FreeWeights;
 import inheritance.model.Kpop;
 import inheritance.model.Foods;
+import inheritance.model.SHINee;
+import inheritance.view.InheritanceFrame;
 
 public class InheritanceController 
 {
 
 	private ArrayList<Foods> foods;
+	private InheritanceFrame baseFrame;
 	
 	public InheritanceController()
 	{
@@ -19,6 +24,11 @@ public class InheritanceController
 	private void makeFoodsList() 
 	{
 	
+		foods.add(new FourMeat());
+		foods.add(new SHINee());
+		foods.add(new FreeWeights());
+		
+		
 		
 	}
 	public void start()
@@ -34,7 +44,16 @@ public class InheritanceController
 	}
 	
 	
-	
+	public String showFoodLevels()
+	{
+		String foodLevels = "";
+		int calories = 8;
+		for(Foods currentFood : foods)
+		{
+			foodLevels += ("this is a " + currentFood.toString() + " and has a calorie count of " + currentFood.calorieCounter(calories) + "\n"); 
+		}
+		return foodLevels;
+	}
 	public void insertionSort()
 	{
 		for(int outerLoop = 1; outerLoop < foods.size(); outerLoop++)
