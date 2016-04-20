@@ -18,7 +18,7 @@ public class FourMeat extends Pizza
 		return calories * 10;
 	}
 	
-	public boolean isSpicy(ArrayList<String> ingredients)
+	public boolean isSpycy(ArrayList<String> ingredients)
 	{
 		for(String ingredient : ingredients)
 		{
@@ -33,7 +33,7 @@ public class FourMeat extends Pizza
 		return false;
 	}
 	
-	public boolean isHealthy(ArrayList<String> ingredients)
+	public boolean isHealthee(ArrayList<String> ingredients)
 	{
 		if(ingredients.contains("Bacon") != true)
 		{
@@ -63,4 +63,6 @@ public class FourMeat extends Pizza
 		
 		return toppings;
 	}
+
+	
 }

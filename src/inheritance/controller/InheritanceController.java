@@ -10,6 +10,17 @@ public class InheritanceController
 
 	private ArrayList<Foods> foods;
 	
+	public InheritanceController()
+	{
+		this.foods = new ArrayList<Foods>();
+		makeFoodsList();
+		baseFrame = new InheritanceFrame(this);
+	}
+	private void makeFoodsList() 
+	{
+	
+		
+	}
 	public void start()
 	{
 		
@@ -21,6 +32,8 @@ public class InheritanceController
 		foods.set(firstLocation, foods.get(secondLocation));
 		foods.set(secondLocation, temp);
 	}
+	
+	
 	
 	public void insertionSort()
 	{

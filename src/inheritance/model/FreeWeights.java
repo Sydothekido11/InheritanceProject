@@ -49,7 +49,7 @@ public class FreeWeights extends Exercise
 		return -5000;
 	}
 	@Override
-	public int delicousness(int criticRating)
+	public int deliciousness(int criticRating)
 	{
 		
 		return 0;

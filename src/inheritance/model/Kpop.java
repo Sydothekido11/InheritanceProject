@@ -2,12 +2,13 @@ package inheritance.model;
 
 import java.util.ArrayList;
 
-public abstract class Kpop implements Foods, Comparable<Foods>
+public abstract class Kpop implements Foods
 {
 
 	private double numberOfMembers;
 	private ArrayList<String> typesOfConcepts;
 	private boolean isCatchy;
+	private int calories;
 	
 	
 	public double getNumberOfMembers() {
@@ -44,10 +45,13 @@ public abstract class Kpop implements Foods, Comparable<Foods>
 	 */
 	public int compareTo(Object compared)
 	{
-		 int comparedValue;
+		 int comparedValue = Integer.MIN_VALUE;
+		 
+		 if(compared instanceof Foods)
+		 {
 		 
 		 
-			 if(this.calorieCounter() < ((Foods) compared).calorieCounter(this.calories))
+			 if(this.calorieCounter(this.calories) < ((Foods) compared).calorieCounter(this.calories))
 			 {
 				 comparedValue = -1;
 			 }
@@ -59,7 +63,7 @@ public abstract class Kpop implements Foods, Comparable<Foods>
 			 {
 				 comparedValue = 0;
 			 }
-		 
+		 }
 		 
 		 return comparedValue;
 	}

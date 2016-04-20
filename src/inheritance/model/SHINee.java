@@ -52,12 +52,6 @@ public class SHINee extends Kpop
 	public int deliciousness(int criticRating)
 	{
 		return 100;
-	}
-
-	@Override
-	public int compareTo(Kpop thing) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	}	
 
 }
